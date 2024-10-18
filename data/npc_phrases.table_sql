@@ -1,0 +1,13 @@
+CREATE TABLE npc_phrases (
+    id INT AUTO_INCREMENT PRIMARY KEY,
+    npc_id INT NOT NULL,
+    phrase TEXT NOT NULL,
+    situation VARCHAR(50) DEFAULT 'default',
+    created_at TIMESTAMP DEFAULT CURRENT_TIMESTAMP
+);
+
+-- Frases teste
+INSERT INTO npc_phrases (npc_id, phrase, situation) VALUES
+(1, 'Bem-vindo à cidade!', 'greeting'),
+(1, 'Volte quando quiser!', 'farewell'),
+(1, 'O que você está procurando?', 'neutral');
